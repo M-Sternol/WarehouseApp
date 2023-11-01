@@ -15,6 +15,6 @@ namespace WarehouseApp.Domain.Model
 
         public int CustomerRef { get; set; }
 
-        public Customer Cusomter { get; set; }
+        public Customer Cusomters { get; set; }
     }
 }

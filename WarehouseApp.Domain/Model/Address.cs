@@ -17,6 +17,6 @@ namespace WarehouseApp.Domain.Model
         public string Country { get; set; }
         public int CustomerId { get; set; }
 
-        public virtual Customer Customer { get; set; }
+        public virtual Customer Customers { get; set; }
     }
 }

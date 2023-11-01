@@ -29,7 +29,7 @@ namespace WarehouseApp.Infrastructure
             base.OnModelCreating(builder);
 
             builder.Entity<Customer>()
-                .HasOne(a => a.CustomerContactInformation).WithOne(b => b.Cusomter)
+                .HasOne(a => a.CustomerContactInformation).WithOne(b => b.Cusomters)
                 .HasForeignKey<CustomerContactInformation>(e => e.CustomerRef);
 
             builder.Entity<ItemTag>()

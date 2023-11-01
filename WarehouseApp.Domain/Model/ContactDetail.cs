@@ -15,6 +15,6 @@ namespace WarehouseApp.Domain.Model
         public ContactDetailType ContactDetailType { get; set; }
 
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public Customer Customers { get; set; }
     }
 }

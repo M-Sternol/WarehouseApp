@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using WarehouseApp.Application;
 using WarehouseApp.Application.Interfaces;
 using WarehouseApp.Application.Services;
+using WarehouseApp.Domain.Interfaces;
 using WarehouseApp.Infrastructure;
+using WarehouseApp.Infrastructure.Repositories;
 
 namespace WarehouseApp.Web
 {
@@ -20,6 +23,8 @@ namespace WarehouseApp.Web
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<Context>();
+            builder.Services.AddApplication();
+            builder.Services.AddInfrastructure();
             builder.Services.AddControllersWithViews();
             builder.Services.AddTransient<IItemService, ItemService>();
 
